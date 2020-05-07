@@ -1,18 +1,30 @@
 {
   "name": "cooking-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "an app for tracking recipes and ingredients",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "eslint --ignore-path .gitignore --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
+  "repository": "https://github.com/balzua/cooking-app.git",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
     "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
     "typescript": "^3.8.3"
   }
 }
